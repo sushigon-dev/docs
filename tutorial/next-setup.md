@@ -15,8 +15,8 @@ nvmをインストールし、nvmでNode.jsをインストールします。
 ### nvm(Node Version Manager)
 > Node.jsをインストール・管理するためのツール。Node.jsをインストールしたり、バージョンを切り替えて複数のバージョンのNode.jsを利用したりすることができる。
 
-### nvmのインストール(scoopを利用)
-- Scoopを使用
+### nvmのインストール
+Scoopを使用
 ```bash
 scoop install nvm
 ```
