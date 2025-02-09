@@ -1,6 +1,12 @@
 # Next.js チュートリアル
 
-## セットアップ
+### Next.js
+> Reactをベースに作られたWebアプリケーションフレームワーク。Reactではできなかったサーバーサイドでの処理(SSR)や静的Webサイトの生成(SSG)などを提供する。
+
+### 参考 : React
+> Webサイト上のUIの作成に特化したwebアプリケーションライブラリ。モダンなwebアプリを作成することができる。
+
+## セットアップ(Node.jsのインストール)
 nvmをインストールし、nvmでNode.jsをインストールします。
 
 ### Node.js
@@ -10,9 +16,13 @@ nvmをインストールし、nvmでNode.jsをインストールします。
 > Node.jsをインストール・管理するためのツール。Node.jsをインストールしたり、バージョンを切り替えて複数のバージョンのNode.jsを利用したりすることができる。
 
 ### nvmのインストール(scoopを利用)
+- Scoopを使用
 ```bash
 scoop install nvm
 ```
+
+この時点でNode.jsはインストールされていません。
+あくまで、Node.jsをインストールするためのツール(nvm)をインストールしただけです。
 
 ### Node.jsのインストール
 今回はversion.18.20.3をインストール
@@ -37,7 +47,7 @@ Node.jsをインストールすると、`npm`や`npx`コマンドが利用でき
 | `npm` | ツールやパッケージのインストールと管理 |
 | `npx` | `npm`でインストールしたパッケージ等の実行 |
 
-## Next.jsプロジェクトの立ち上げ
+## プロジェクトの立ち上げ
 プロジェクトを立ち上げたい場所まで移動し、以下のコマンドを実行。
 ```bash
 npx create-next-app@latest
@@ -106,8 +116,8 @@ npm run dev
 スマホ用のwebアプリを開発するときにはよく利用すると思います。
 
 ## フロント開発でおすすめのVSCode拡張機能
-- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)(**推奨**) : HTML, CSS, JavaScriptなどのフロント開発周りの言語対応のフォーマッターです。自動的にインデントや改行, 適切な空白を入れてくれます。
-- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)(**推奨**) : Tailwind CSSを利用する際にサジェストが利用できるようになります。
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (**推奨**) : HTML, CSS, JavaScriptなどのフロント開発周りの言語対応のフォーマッターです。自動的にインデントや改行, 適切な空白を入れてくれます。
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) (**推奨**) : Tailwind CSSを利用する際にサジェストが利用できるようになります。
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme) : ファイルアイコンを追加します。フロント開発ではいろんな拡張子のファイルを扱うからあると便利かも。
 
 Prettierでは上書き保存の際に自動的にフォーマッティングを行うように設定すると便利です。
@@ -121,11 +131,13 @@ Prettierでは上書き保存の際に自動的にフォーマッティングを
 }
 ```
 
-## git-czのインストール
+## 補足 : git-czのインストール
+(Next.jsの開発とは全く関係ない話です。Node.jsインストール済みの環境で利用できるツールなのでここで紹介しています。)
+
 このリポジトリでは`git cz`コマンドによるコミットが可能です。
 `git cz`を利用するにはgit-czをインストールする必要があります。
 
-git-czはJavaScriptで開発されたツールで、npmでインストールします。
+git-czはJavaScriptで開発されたツールなので、**npmでインストールします**。
 ```bash
 npm i -g git-cz
 ```
